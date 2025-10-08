@@ -1,0 +1,8 @@
+<h1>Hello from Angular 👋</h1>
+
+<button (click)="getTime()" [disabled]="loading">
+  {{ loading ? 'Loading…' : 'What time is it?' }}
+</button>
+
+<p *ngIf="time">Server time (UTC): <strong>{{ time }}</strong></p>
+<p *ngIf="error" style="color:crimson">Error: {{ error }}</p>
