@@ -1,11 +1,13 @@
 services:
-  - type: web
+  - type: static
     name: hello-fe
-    env: static
+    region: frankfurt
+    repo: https://github.com/Brno-UPI-GENEKOM/hello-fe
     branch: main
     buildCommand: npm ci && npm run build
     staticPublishPath: dist/hello-fe/browser
+    autoDeploy: true
     routes:
       - type: rewrite
-        source: /*
+        source: /.*
         destination: /index.html
