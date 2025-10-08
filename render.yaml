@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hello-fe
+    env: static
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist/hello-fe/browser
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
