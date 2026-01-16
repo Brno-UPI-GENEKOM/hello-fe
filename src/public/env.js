@@ -1,1 +1,1 @@
-window.env = { BACKEND_URL: "http://localhost:5000" };
+window.env = { BACKEND_URL: "https://test-python.osc-fr1.scalingo.io" };
